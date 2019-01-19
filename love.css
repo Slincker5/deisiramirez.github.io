@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+body {
+    background: #9400D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: all .5s ease-in-out;
+}
+.teamo {
+    background: #fff;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    padding: 1.5em;
+    display: block;
+    transition: all 900ms ease;
+}
+input {
+    background: #fff;
+    padding: 1em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    outline: 0;
+    width: 100%;
+}
+.continue {
+    display: inline-block;
+    padding: .5em 1em;
+    color: #fff;
+    background: #f62459;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 2px;
+}
+@keyframes texto {
+    0%{
+            transform: scale(1.5,1.5);
+        }
+        50% {
+            transform: scale(1,1);
+            }
+            100%{
+            transform: scale(1.5,1.5);
+        }
+    }
+.zoom {
+    animation: texto 900ms infinite ease;
+    transition: all 900ms ease;
+}
+@keyframes zoominus {
+  from {
+    transform: scale(1.5,1.5);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+.zoominus {
+  animation: zoominus 1500ms 1 ease;
+}
+.load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #9400D3 ;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cargando {
+  padding: .5em;
+  animation: carga 900ms infinite ease;
+  text-align: center;
+}
+.cargando img {
+  width: 12px;
+}
+.fadeout {
+  animation: fadeout 1s 1 ease;
+}
+.play {
+  background: #f62459;
+  color: #fff;
+}
+@keyframes carga {
+  0% {
+    transform: scale(1.5,1.5);
+  }
+  50% {
+    transform: scale(2,2)
+  }
+  100% {
+    transform: scale(1.5,1.5);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
